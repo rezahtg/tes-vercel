@@ -1,0 +1,11 @@
+.custom-hide{
+    display: none !important;
+}
+
+.custom-show{
+    display: inline;
+}
+
+.form-muted{
+    background-color: #ddd !important;
+}
