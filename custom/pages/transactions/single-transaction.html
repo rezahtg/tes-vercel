@@ -93,7 +93,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--begin::Brand-->
 					<div class="brand flex-column-auto" id="kt_brand">
 						<!--begin::Logo-->
-						<a href="index.html" class="brand-logo">
+						<a href="home.html" class="brand-logo">
 							<h4 class="text-dark">BPDLH DASHBOARD</h4>
 						</a>
 						<!--end::Logo-->
@@ -121,7 +121,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav">
 								<li class="menu-item menu-item-active" aria-haspopup="true">
-									<a href="index.html" class="menu-link">
+									<a href="home.html" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -593,12 +593,24 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             <span id="isAccountAvailable" class="pt-5 custom-hide" style="color: green;">Account No is Available</span>
 														</div>
 														<!--end::Form Group-->
-                                                        <!--begin::Form Group-->
-														<div class="form-group">
-															<label class="font-size-h6 font-weight-bolder text-dark">Amount<span style="color: red;">*</span></label>
-															<input type="text" class="form-control form-control-solid h-auto p-5 border-0 rounded-lg font-size-h6" name="amount" placeholder="Please fill amount" value="" />
+														<label class="font-size-h6 font-weight-bolder text-dark">Amount<span style="color: red;">*</span></label>
+														<div class="row">
+															<div class="col-2">
+																<!--begin::Form Group-->
+																<div class="form-group">
+																	<input type="text" class="form-control form-control-solid h-auto p-5 border-0 rounded-lg font-size-h6" name="currency" placeholder="IDR" value="" disabled />
+																</div>
+																<!--end::Form Group-->
+															</div>
+															<div class="col-10">
+																<!--begin::Form Group-->
+																<div class="form-group">
+																	<input type="text" class="form-control form-control-solid h-auto p-5 border-0 rounded-lg font-size-h6" name="amount" placeholder="Please fill amount" value="" />
+																</div>
+																<!--end::Form Group-->
+															</div>
 														</div>
-														<!--end::Form Group-->
+                                                        
 														<!--begin::Form Group-->
 														<div class="form-group">
 															<label class="font-size-h6 font-weight-bolder text-dark">Description</label>
@@ -615,6 +627,12 @@ License: You must have a valid license purchased only from themeforest(the above
 															<div class="text-muted font-weight-bold font-size-h4">Please upload file instruction here.</div>
 														</div>
 														<!--begin::Title-->
+														<!--begin::Form Group-->
+														<div class="form-group">
+															<label class="font-size-h6 font-weight-bolder text-dark">Instruction Letter Number</label>
+															<input type="text" class="form-control form-control-solid h-auto p-5 border-0 rounded-lg font-size-h6" name="noletter" placeholder="Please fill instruction letter number" value="" />
+														</div>
+														<!--end::Form Group-->
 														<div class="form-group row">
 															<label class="font-size-h6 font-weight-bolder text-dark">Letter Date</label>
 															<div class="col-xl-12">

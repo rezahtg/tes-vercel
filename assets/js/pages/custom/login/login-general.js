@@ -64,7 +64,7 @@ var KTLogin = function() {
     					},
 						timer: 3000,
 		            }).then(function() {
-						window.location.href = 'index.html';
+						window.location.href = 'home.html';
 						KTUtil.scrollTop();
 						
 					});
