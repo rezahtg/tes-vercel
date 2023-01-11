@@ -49,6 +49,8 @@ var KTLogin = function() {
 			}
 		);
 
+		
+
         $('#kt_login_signin_submit').on('click', function (e) {
             e.preventDefault();
 
@@ -103,6 +105,11 @@ var KTLogin = function() {
 					
 				});
 		    });
+        });
+
+		$('#kt_login_forgot_cancel').on('click', function (e) {
+            e.preventDefault();
+            window.location.href = 'index.html';
         });
 
         // Handle forgot button
