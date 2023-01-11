@@ -84,6 +84,27 @@ var KTLogin = function() {
 		    });
         });
 
+		$('#kt_login_forgot_submit').on('click', function (e) {
+            e.preventDefault();
+
+            validation.validate().then(function(status) {
+		        swal.fire({
+					text: "Password Reset Success! Cek your email",
+					icon: "success",
+					buttonsStyling: false,
+					confirmButtonText: "Ok, got it!",
+					customClass: {
+						confirmButton: "btn font-weight-bold btn-light-primary"
+					},
+					timer: 3000,
+				}).then(function() {
+					window.location.href = 'index.html';
+					KTUtil.scrollTop();
+					
+				});
+		    });
+        });
+
         // Handle forgot button
         $('#kt_login_forgot').on('click', function (e) {
             e.preventDefault();
