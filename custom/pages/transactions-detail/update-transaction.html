@@ -501,13 +501,7 @@ License: You must have a valid license purchased only from themeforest(the above
 															</div>
 														</div>
 														<div class="form-group row">
-															<label class="col-3">Batch ID</label>
-															<div class="col-9">
-																<input class="form-control form-control-solid form-muted" type="text" value="" disabled/>
-															</div>
-														</div>
-														<div class="form-group row">
-															<label class="col-3">Letter Number</label>
+															<label class="col-3">Instruction Letter Number</label>
 															<div class="col-9">
 																<input class="form-control form-control-solid form-muted" type="text" value="BPDLH0123" disabled/>
 															<!-- <span class="form-text text-muted">If you want your invoices addressed to a company. Leave blank to use your full name.</span> -->
@@ -524,7 +518,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<div class="form-group row">
 															<label class="col-3">Destination Bank</label>
 															<div class="col-9">
-																<select class="form-control form-control-solid form-muted" disabled>
+																<select id="dbank" class="form-control form-control-solid form-muted" disabled>
 																	<option value="Transfer">BNI</option>
 																</select>
 															</div>
@@ -544,7 +538,14 @@ License: You must have a valid license purchased only from themeforest(the above
 														<div class="form-group row">
 															<label class="col-3">Amount</label>
 															<div class="col-9">
-																<input class="form-control form-control-solid form-muted" type="text" value="1.000.000" disabled/>
+																<div class="row form-group">
+																	<div class="col-2">
+																		<input class="form-control form-control-solid form-muted" type="text" value="IDR" disabled/>
+																	</div>
+																	<div class="col-10">
+																		<input class="form-control form-control-solid form-muted" type="text" value="1.000.000" disabled/>
+																	</div>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -560,16 +561,34 @@ License: You must have a valid license purchased only from themeforest(the above
 														<div class="form-group row">
 															<label class="col-3">Status</label>
 															<div class="col-9">
-																<select class="form-control form-control-solid">
-																	<option value="Transfered">Transfered</option>
-																	<option value="Failed">Failed</option>
+																<select class="form-control form-control-solid" onchange="showRemark(this)">
+																	<option value="1">Transfered</option>
+																	<option  value="2">Hold</option>
 																</select>
 															</div>
 														</div>
-														<div class="form-group row">
-															<label class="col-3">No. BOR / SOR</label>
-															<div class="col-9">
-																<input class="form-control form-control-solid" type="text" placeholder="fill with no.bor/sor" value=""/>
+														<div id="pstatus-remark" class="custom-hide">
+															<div  class="form-group row">
+																<label class="col-3">Remark</label>
+																<div class="col-9">
+																	<input class="form-control form-control-solid" type="text" placeholder="Remark" value=""/>
+																</div>
+															</div>
+														</div>
+														<div id="nobor" class="custom-hide">
+															<div class="form-group row">
+																<label class="col-3">No. BOR / SOR</label>
+																<div class="col-9">
+																	<input class="form-control form-control-solid" type="text" placeholder="fill with no.bor/sor" value=""/>
+																</div>
+															</div>
+														</div>
+														<div class="custom-hide" id="nojournal">
+															<div class="form-group row">
+																<label class="col-3">Journal Number</label>
+																<div class="col-9">
+																	<input class="form-control form-control-solid" type="text" placeholder="fill with journal number" value=""/>
+																</div>
 															</div>
 														</div>
 														<div class="form-group row">
@@ -750,7 +769,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Page Scripts-->
         <!--begin::Page Scripts(used by this page)-->
 		<script src="assets/js/pages/crud/file-upload/dropzonejs.js"></script>
-        <script src="assets/js/custom/custom-1.js"></script>
 		<!--end::Page Scripts-->
 		<!--begin::Page Vendors(used by this page)-->
 		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
@@ -758,6 +776,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="assets/js/pages/crud/datatables/search-options/advanced-search.js"></script>
 		<!--end::Page Scripts-->
+		<script src="assets/js/custom/custom-1.js"></script>
 	</body>
 	<!--end::Body-->
 </html>

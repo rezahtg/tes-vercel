@@ -417,7 +417,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<a href="/index.html" class="text-muted">Homepage</a>
 										</li>
 										<li class="breadcrumb-item text-muted">
-											<a href="#" class="text-muted">List Instrcution</a>
+											<a href="#" class="text-muted">List Instruction</a>
 										</li>
 									</ul>
 									<!--end::Breadcrumb-->
@@ -513,7 +513,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<!--end::Dropdown-->
 											<!--begin::Button-->
-											<a href="#" class="btn btn-primary font-weight-bolder">
+											<a href="/custom/pages/transactions/add-transaction.html" class="btn btn-primary font-weight-bolder">
 											<span class="svg-icon svg-icon-md">
 												<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
 												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -524,7 +524,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													</g>
 												</svg>
 												<!--end::Svg Icon-->
-											</span>New Record</a>
+											</span>Add Instruction</a>
 											<!--end::Button-->
 										</div>
 									</div>
@@ -532,15 +532,11 @@ License: You must have a valid license purchased only from themeforest(the above
 										<!--begin: Search Form-->
 										<form class="mb-15">
 											<div class="row mb-6">
-												<div class="col-lg-4 mb-lg-0 mb-6">
+												<div class="col-lg-6 mb-lg-0 mb-6">
 													<label>SI ID:</label>
 													<input type="text" class="form-control datatable-input" placeholder="E.g: 4590" data-col-index="0" />
 												</div>
-												<div class="col-lg-4 mb-lg-0 mb-6">
-													<label>Batch ID:</label>
-													<input type="text" class="form-control datatable-input" placeholder="E.g: 37000-300" data-col-index="1" />
-												</div>
-												<div class="col-lg-4 mb-lg-0 mb-6">
+												<div class="col-lg-6 mb-lg-0 mb-6">
 													<label>Instruction Type:</label>
 													<select class="form-control datatable-input" data-col-index="4">
 														<option value="">Select</option>
@@ -550,7 +546,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</div>
 											</div>
 											<div class="row mb-8">
-												<div class="col-lg-3 mb-lg-0 mb-6">
+												<div class="col-lg-4 mb-lg-0 mb-6">
 													<label>Instruction Date:</label>
 													<div class="input-daterange input-group" id="kt_datepicker">
 														<input type="text" class="form-control datatable-input" name="start" placeholder="From" data-col-index="5" />
@@ -562,16 +558,17 @@ License: You must have a valid license purchased only from themeforest(the above
 														<input type="text" class="form-control datatable-input" name="end" placeholder="To" data-col-index="5" />
 													</div>
 												</div>
-												<div class="col-lg-3 mb-lg-0 mb-6">
+												<div class="col-lg-4 mb-lg-0 mb-6">
 													<label>Status:</label>
 													<select class="form-control datatable-input" data-col-index="6">
 														<option value="">Select</option>
-														<option value="">Success</option>
-														<option value="">Pending</option>
+														<option value="">Created</option>
+														<option value="">Transfered</option>
+														<option value="">Hold</option>
 														<option value="">Failed</option>
 													</select>
 												</div>
-												<div class="col-lg-3 mb-lg-0 mb-6">
+												<div class="col-lg-4 mb-lg-0 mb-6">
 													<label>Destination Bank:</label>
 													<select class="form-control datatable-input" data-col-index="7">
 														<option value="">Select</option>
@@ -602,11 +599,11 @@ License: You must have a valid license purchased only from themeforest(the above
 											<thead>
 												<tr>
 													<th>SI ID</th>
-													<th>Batch ID</th>
-													<th>Letter Number</th>
+													<th>Instruction Letter Number</th>
 													<th>Instruction Type</th>
+													<th>Amount</th>
 													<th>Destination Bank</th>
-													<th>Account No</th>
+													<th>Beneficiary Account No</th>
 													<th>Status</th>
 													<th>Action</th>
 												</tr>
@@ -614,9 +611,9 @@ License: You must have a valid license purchased only from themeforest(the above
 											<tbody>
 												<tr>
 													<td>SI211122001</td>
-													<td></td>
 													<td>BPDLH0001</td>
 													<td>Transfer</td>
+													<td>1.000.000</td>
 													<td>BNI</td>
 													<td>12323243</td>
 													<td><span class="label label-lg label-light-primary label-inline font-weight-bold py-4">Created</span></td>
@@ -628,9 +625,9 @@ License: You must have a valid license purchased only from themeforest(the above
 												</tr>
 												<tr>
 													<td>SI211122002</td>
-													<td>B29112022</td>
 													<td>BPDLH0002</td>
 													<td>Transfer</td>
+													<td>2.000.000</td>
 													<td>BNI</td>
 													<td>12323243</td>
 													<td><span class="label label-lg label-light-primary label-inline font-weight-bold py-4">Created</span></td>
@@ -642,9 +639,9 @@ License: You must have a valid license purchased only from themeforest(the above
 												</tr>
 												<tr>
 													<td>SI211122003</td>
-													<td>B29112022</td>
 													<td>BPDLH0003</td>
 													<td>Transfer</td>
+													<td>3.000.000</td>
 													<td>Interbank</td>
 													<td>12323243</td>
 													<td><span class="label label-lg label-light-success label-inline font-weight-bold py-4">Transfered</span></td>
@@ -656,9 +653,9 @@ License: You must have a valid license purchased only from themeforest(the above
 												</tr>
 												<tr>
 													<td>SI211122004</td>
-													<td></td>
 													<td>BPDLH0004</td>
 													<td>Transfer Khusus</td>
+													<td>5.000.000</td>
 													<td>BNI</td>
 													<td>12323243</td>
 													<td><span class="label label-lg label-light-success label-inline font-weight-bold py-4">Transfered</span></td>
@@ -670,9 +667,9 @@ License: You must have a valid license purchased only from themeforest(the above
 												</tr>
 												<tr>
 													<td>SI211122002</td>
-													<td>B30112022</td>
 													<td>BPDLH0005</td>
 													<td>Transfer</td>
+													<td>10.000.000</td>
 													<td>BNI</td>
 													<td>12323243</td>
 													<td><span class="label label-lg label-light-success label-inline font-weight-bold py-4">Transfered</span></td>
@@ -683,18 +680,6 @@ License: You must have a valid license purchased only from themeforest(the above
 													</td>
 												</tr>
 											</tbody>
-											<tfoot>
-												<tr>
-													<th>SI ID</th>
-													<th>Batch ID</th>
-													<th>Letter Number</th>
-													<th>Instruction Type</th>
-													<th>Destination Bank</th>
-													<th>Account No</th>
-													<th>Status</th>
-													<th>Action</th>
-												</tr>
-											</tfoot>
 										</table>
 										<!--end: Datatable-->
 									</div>

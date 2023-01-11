@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
   $("#btn-checkAccount").on('click', function(e) {
     e.preventDefault();
@@ -7,12 +5,20 @@ $(document).ready(function(){
     document.getElementById('isAccountAvailable').classList.add("custom-show");
   })
 
+  if($("#dbank option:selected").text() == 'BNI'){
+    document.getElementById('nojournal').classList.remove("custom-hide");
+    document.getElementById('nojournal').classList.add("custom-show");
+  } else if ($("#dbank option:selected").text() == 'Interbank') {
+    document.getElementById('nobor').classList.remove("custom-hide");
+    document.getElementById('nobor').classList.add("custom-show");
+  } 
   
   $("#ibCheck").on('change', function(e) {
     e.preventDefault();
     document.getElementById('destBank').classList.remove("custom-hide");
     document.getElementById('destBank').classList.add("custom-show");
   })
+
 
   $("#inCheck").on('change', function(e) {
     e.preventDefault();
@@ -42,7 +48,7 @@ $(document).ready(function(){
       if (result.isConfirmed) {
         swalWithBootstrapButtons.fire(
           'Success!',
-          'Your file has been submitted.',
+          'Your file has been submited.',
           'success'
         )
         document.getElementById('summary-bulk').classList.remove("custom-hide");
@@ -54,6 +60,47 @@ $(document).ready(function(){
         swalWithBootstrapButtons.fire(
           'Cancelled',
           'Please make sure the file you want submit:)',
+          'error'
+        )
+      }
+    })
+  })
+  
+  $("#btn-submitMaster").on('click', function(e){
+    e.preventDefault();
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+    })
+    
+    swalWithBootstrapButtons.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, Submit it!',
+      cancelButtonText: 'No, cancel!',
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        swalWithBootstrapButtons.fire(
+          'Success!',
+          'Your Data has been submited.',
+          'success'
+        )
+        location.href = "/custom/pages/master-account/master-account.html";
+        // document.getElementById('summary-bulk').classList.remove("custom-hide");
+        // document.getElementById('isAccountAvailable').classList.add("custom-show");
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire(
+          'Cancelled',
+          'Please make sure data you want submit:)',
           'error'
         )
       }
@@ -99,6 +146,16 @@ $(document).ready(function(){
     })
   })
 });  
+
+
+function showRemark(select){
+  if(select.value==2){
+    document.getElementById('pstatus-remark').classList.remove("custom-hide");
+    document.getElementById('pstatus-remark').classList.add("custom-show");
+  } else{
+    document.getElementById('pstatus-remark').classList.add("custom-hide");
+  }
+} 
 
 // function checkStatus(param) {
 //     Swal.fire({
