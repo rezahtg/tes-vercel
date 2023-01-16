@@ -37,7 +37,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="assets/css/themes/layout/brand/light.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/themes/layout/aside/light.css" rel="stylesheet" type="text/css" />
 		<!--end::Layout Themes-->
-		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<link rel="shortcut icon" href="assets/media/logos/favicon.png" />
         <!--begin::Page Custom Styles(used by this page)-->
 		<link href="assets/css/pages/wizard/wizard-6.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/custom/style-1.css" rel="stylesheet" type="text/css" />
@@ -236,6 +236,21 @@ License: You must have a valid license purchased only from themeforest(the above
 								<li class="menu-section">
 									<h4 class="menu-text">Utilities</h4>
 									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+								</li>
+								<li class="menu-item" aria-haspopup="true">
+									<a  href="/custom/pages/upload.html" class="menu-link">
+										<span class="svg-icon menu-icon">
+											<!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\legacy\metronic\theme\html\demo1\dist/../src/media/svg/icons\Files\Upload-folder.svg-->
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													<rect x="0" y="0" width="24" height="24"/>
+													<path d="M3.5,21 L20.5,21 C21.3284271,21 22,20.3284271 22,19.5 L22,8.5 C22,7.67157288 21.3284271,7 20.5,7 L10,7 L7.43933983,4.43933983 C7.15803526,4.15803526 6.77650439,4 6.37867966,4 L3.5,4 C2.67157288,4 2,4.67157288 2,5.5 L2,19.5 C2,20.3284271 2.67157288,21 3.5,21 Z" fill="#000000" opacity="0.3"/>
+													<path d="M8.54301601,14.4923287 L10.6661,14.4923287 L10.6661,16.5 C10.6661,16.7761424 10.8899576,17 11.1661,17 L12.33392,17 C12.6100624,17 12.83392,16.7761424 12.83392,16.5 L12.83392,14.4923287 L14.9570039,14.4923287 C15.2331463,14.4923287 15.4570039,14.2684711 15.4570039,13.9923287 C15.4570039,13.8681299 15.41078,13.7483766 15.3273331,13.6563877 L12.1203391,10.1211145 C11.934804,9.91658739 11.6185961,9.90119131 11.414069,10.0867264 C11.4020553,10.0976245 11.390579,10.1091008 11.3796809,10.1211145 L8.1726869,13.6563877 C7.98715181,13.8609148 8.00254789,14.1771227 8.20707501,14.3626578 C8.29906387,14.4461047 8.41881721,14.4923287 8.54301601,14.4923287 Z" fill="#000000"/>
+												</g>
+											</svg><!--end::Svg Icon-->
+										</span>
+										<span class="menu-text">Master Upload</span>
+									</a>
 								</li>
 								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
@@ -545,34 +560,10 @@ License: You must have a valid license purchased only from themeforest(the above
 											Back
 											</a>
 											<div class="btn-group">
-												<button type="button" class="btn btn-primary font-weight-bolder">
+												<button type="button" class="btn btn-primary font-weight-bolder btn-updateStatus">
 													<i class="ki ki-check icon-sm"></i>
 													Save Update
 												</button>
-												<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												</button>
-												<div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-													<ul class="nav nav-hover flex-column">
-														<li class="nav-item">
-														<a href="#" class="nav-link">
-														<i class="nav-icon flaticon2-reload"></i>
-														<span class="nav-text">Save & continue</span>
-														</a>
-														</li>
-														<li class="nav-item">
-														<a href="#" class="nav-link">
-														<i class="nav-icon flaticon2-add-1"></i>
-														<span class="nav-text">Save & add new</span>
-														</a>
-														</li>
-														<li class="nav-item">
-														<a href="#" class="nav-link">
-														<i class="nav-icon flaticon2-power"></i>
-														<span class="nav-text">Save & exit</span>
-														</a>
-														</li>
-													</ul>
-												</div>
 											</div>
 										</div>
 									</div>
@@ -585,20 +576,20 @@ License: You must have a valid license purchased only from themeforest(the above
 													<div class="my-5">
 														<h3 class=" text-dark font-weight-bold mb-10">Instruction Info:</h3>
 														<div class="form-group row">
-															<label class="col-3">SI ID</label>
+															<label class="col-3">SI ID<span class="text-danger">*</span></label>
 															<div class="col-9">
 																<input class="form-control form-control-solid form-muted" type="text" value="SI211122001" disabled/>
 															</div>
 														</div>
 														<div class="form-group row">
-															<label class="col-3">Instruction Letter Number</label>
+															<label class="col-3">Instruction Letter Number<span class="text-danger">*</span></label>
 															<div class="col-9">
 																<input class="form-control form-control-solid form-muted" type="text" value="BPDLH0123" disabled/>
 															<!-- <span class="form-text text-muted">If you want your invoices addressed to a company. Leave blank to use your full name.</span> -->
 															</div>
 														</div>
 														<div class="form-group row">
-															<label class="col-3">Instruction Type</label>
+															<label class="col-3">Instruction Type<span class="text-danger">*</span></label>
 															<div class="col-9">
 																<select class="form-control form-control-solid form-muted" disabled>
 																	<option value="Transfer">Transfer</option>
@@ -606,7 +597,7 @@ License: You must have a valid license purchased only from themeforest(the above
 															</div>
 														</div>
 														<div class="form-group row">
-															<label class="col-3">Destination Bank</label>
+															<label class="col-3">Destination Bank<span class="text-danger">*</span></label>
 															<div class="col-9">
 																<select id="dbank" class="form-control form-control-solid form-muted" disabled>
 																	<option value="Transfer">BNI</option>
@@ -614,19 +605,19 @@ License: You must have a valid license purchased only from themeforest(the above
 															</div>
 														</div>
 														<div class="form-group row">
-															<label class="col-3">Beneficiary Account No</label>
+															<label class="col-3">Beneficiary Account No<span class="text-danger">*</span></label>
 															<div class="col-9">
 																<input class="form-control form-control-solid form-muted" type="text" value="123456789" disabled/>
 															</div>
 														</div>
 														<div class="form-group row">
-															<label class="col-3">Beneficiary Account Name</label>
+															<label class="col-3">Beneficiary Account Name<span class="text-danger">*</span></label>
 															<div class="col-9">
 																<input class="form-control form-control-solid form-muted" type="text" value="Testing BPDLH" disabled/>
 															</div>
 														</div>
 														<div class="form-group row">
-															<label class="col-3">Amount</label>
+															<label class="col-3">Amount<span class="text-danger">*</span></label>
 															<div class="col-9">
 																<div class="row form-group">
 																	<div class="col-2">
@@ -643,15 +634,15 @@ License: You must have a valid license purchased only from themeforest(the above
 													<div class="my-5">
 														<h3 class=" text-dark font-weight-bold mb-10">Attachment File:</h3>
 														<div class="form-group row">
-															<label class="col-3">Instruction Letter</label>
+															<label class="col-3">Instruction Letter<span class="text-danger">*</span></label>
 															<div class="col-9">
 																: <a href="#"><span> instrution letter test.pdf</span></a>
 															</div>
 														</div>
 														<div class="form-group row">
-															<label class="col-3">Status</label>
+															<label class="col-3">Status<span class="text-danger">*</span></label>
 															<div class="col-9">
-																<select class="form-control form-control-solid" onchange="showRemark(this)">
+																<select class="form-control" onchange="showRemark(this)">
 																	<option value="1">Transfered</option>
 																	<option  value="2">Hold</option>
 																</select>
@@ -665,7 +656,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																</div>
 															</div>
 														</div>
-														<div id="nobor" class="custom-hide">
+														<!-- <div id="nobor" class="custom-hide">
 															<div class="form-group row">
 																<label class="col-3">No. BOR / SOR</label>
 																<div class="col-9">
@@ -680,14 +671,13 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<input class="form-control form-control-solid" type="text" placeholder="fill with journal number" value=""/>
 																</div>
 															</div>
-														</div>
+														</div> -->
 														<div class="form-group row">
 															<label class="col-3">Upload Invoice Transfer</label>
 															<div class="col-9">
 																<div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_2">
 																	<div class="dropzone-msg dz-message needsclick">
 																		<h3 class="dropzone-msg-title">Drop files here or click to upload.</h3>
-																		<span class="dropzone-msg-desc">Upload up to 10 files</span>
 																	</div>
 																</div>
 															</div>
@@ -702,7 +692,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="row">
 											<div class="col-5"></div>
 											<div class="col-7">
-												<button id="btn-updateStatus" type="reset" class="btn btn-primary mr-2">Update</button>
+												<button type="reset" class="btn btn-primary mr-2 btn-updateStatus">Update</button>
 												<button type="reset" class="btn btn-secondary">Cancel</button>
 											</div>
                                         </div>

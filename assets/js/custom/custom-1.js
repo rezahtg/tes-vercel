@@ -3,15 +3,17 @@ $(document).ready(function(){
     e.preventDefault();
     document.getElementById('isAccountAvailable').classList.remove("custom-hide");
     document.getElementById('isAccountAvailable').classList.add("custom-show");
+    document.getElementById('accountName').classList.remove("custom-hide");
+    document.getElementById('accountName').classList.add("custom-show");
   })
 
-  if($("#dbank option:selected").text() == 'BNI'){
-    document.getElementById('nojournal').classList.remove("custom-hide");
-    document.getElementById('nojournal').classList.add("custom-show");
-  } else if ($("#dbank option:selected").text() == 'Interbank') {
-    document.getElementById('nobor').classList.remove("custom-hide");
-    document.getElementById('nobor').classList.add("custom-show");
-  } 
+  // if($("#dbank option:selected").text() == 'BNI'){
+  //   document.getElementById('nojournal').classList.remove("custom-hide");
+  //   document.getElementById('nojournal').classList.add("custom-show");
+  // } else if ($("#dbank option:selected").text() == 'Interbank') {
+  //   document.getElementById('nobor').classList.remove("custom-hide");
+  //   document.getElementById('nobor').classList.add("custom-show");
+  // } 
   
   $("#ibCheck").on('change', function(e) {
     e.preventDefault();
@@ -107,7 +109,8 @@ $(document).ready(function(){
     })
   })
 
-  $("#btn-updateStatus").on('click', function(e){
+  $(".btn-updateStatus").on('click', function(e){
+    console.log("tes");
     e.preventDefault();
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
