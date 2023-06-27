@@ -14,6 +14,7 @@ $(document).ready(function(){
   //   document.getElementById('nobor').classList.remove("custom-hide");
   //   document.getElementById('nobor').classList.add("custom-show");
   // } 
+
   
   $("#ibCheck").on('change', function(e) {
     e.preventDefault();
@@ -159,6 +160,15 @@ function showRemark(select){
     document.getElementById('pstatus-remark').classList.add("custom-hide");
   }
 } 
+
+function selectInstructionType(select) {
+  if (select.value == 'lainnya') {
+    document.getElementById('acc_no').classList.remove('custom-hide');
+    // document.getElementById('acc_no').classList.remove('custom-show');
+  }  else{
+    document.getElementById('acc_no').classList.add('custom-hide');
+  }
+}
 
 // function checkStatus(param) {
 //     Swal.fire({

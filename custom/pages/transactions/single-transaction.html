@@ -638,14 +638,15 @@ License: You must have a valid license purchased only from themeforest(the above
 																<!--begin::Select-->
 																<div class="form-group">
 																	<label class="font-size-h6 font-weight-bolder text-dark">Instruction Type<span style="color: red;">*</span></label>
-																	<select name="type" class="form-control h-auto p-5 border-dark rounded-lg font-size-h6">
+																	<select id="instruction_type" name="type" class="form-control h-auto p-5 border-dark rounded-lg font-size-h6" onchange=selectInstructionType(this)>
 																		<option value="">Select</option>
 																		<option value="transfer">Transfer</option>
 																		<option value="transfer-khusus">Transfer Khusus</option>
-																		<option value="transfer-khusus">Lainnya</option>
+																		<option value="lainnya">Lainnya</option>
 																	</select>
 																</div>
 																<!--end::Input-->
+																<input id="acc_no" type="text" class="form-control h-auto p-5 border-dark rounded-lg font-size-h6 custom-hide" name="lainnya" placeholder="lainnya" value="" />
 														</div>
 														<!--end::Form Group-->
                                                         <!--begin::Form Group-->
